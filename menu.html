@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quickbite Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">QUICKBite</a>
+
+      <nav class="nav-links">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="#appetizers" class="nav-link">Appetizers</a>
+        <a href="#pizzas" class="nav-link">Pizzas</a>
+        <a href="#burgers" class="nav-link">Burgers</a>
+        <a href="#pasta" class="nav-link">Pasta</a>
+        <a href="#chicken" class="nav-link">Chicken</a>
+        <a href="#sides" class="nav-link">Sides</a>
+        <a href="#desserts" class="nav-link">Desserts</a>
+        <a href="#drinks" class="nav-link">Drinks</a>
+      </nav>
+
+      <button id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="side-panel">☰</button>
+    </div>
+  </header>
+
+  <div id="side-panel">
+    <a href="index.html#home">Home</a>
+    <a href="#appetizers">Appetizers</a>
+    <a href="#pizzas">Pizzas</a>
+    <a href="#burgers">Burgers</a>
+    <a href="#pasta">Pasta</a>
+    <a href="#chicken">Chicken</a>
+    <a href="#sides">Sides</a>
+    <a href="#desserts">Desserts</a>
+    <a href="#drinks">Drinks</a>
+  </div>
+
+  <div id="overlay"></div>
+
+  <main>
+    <section class="menu-hero">
+      <div class="container">
+        <div class="menu-hero-content">
+          <span class="divider-gold">Our Menu</span>
+          <h1>Quickbite <span class="text-gradient-gold">Menu</span></h1>
+          <p>Choose from our wide range of fresh meals, tasty combos, snacks and drinks. All made to match your craving.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-actions">
+      <div class="menu-search-box">
+        <label for="menu-search">Search the menu</label>
+        <input id="menu-search" type="text" placeholder="Search appetizers, burgers, drinks...">
+        <button id="search-clear" type="button">Clear</button>
+      </div>
+      <div class="menu-tabs" id="category-tabs">
+        <button class="menu-tab active" data-category="all">All</button>
+        <button class="menu-tab" data-category="appetizers">Appetizers</button>
+        <button class="menu-tab" data-category="pizzas">Pizzas</button>
+        <button class="menu-tab" data-category="burgers">Burgers</button>
+        <button class="menu-tab" data-category="pasta">Pasta</button>
+        <button class="menu-tab" data-category="chicken">Chicken</button>
+        <button class="menu-tab" data-category="sides">Sides</button>
+        <button class="menu-tab" data-category="desserts">Desserts</button>
+        <button class="menu-tab" data-category="drinks">Drinks</button>
+      </div>
+    </section>
+
+    <section class="menu-grid" id="menu-grid">
+      <article class="menu-card" data-category="appetizers" id="appetizers">
+        <div class="image-wrap">
+          <span class="badge">Best Seller</span>
+          <img src="Mozzarella Sticks.jpg" alt="Mozzarella Sticks" />
+        </div>
+        <div class="item-details">
+          <h3>Mozzarella Sticks</h3>
+          <p>Crispy fried mozzarella cheese sticks with marinara.</p>
+          <span class="price">₦1,500</span>
+          <button class="btn btn-gold order-btn" data-name="Mozzarella Sticks" data-price="₦1,500">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="appetizers">
+        <div class="image-wrap">
+          <img src="Loaded Fries.jpg" alt="Loaded Fries" />
+        </div>
+        <div class="item-details">
+          <h3>Loaded Fries</h3>
+          <p>Fries with cheese, bacon bits, spring onion and garlic mayo.</p>
+          <span class="price">₦2,000</span>
+          <button class="btn btn-gold order-btn" data-name="Loaded Fries" data-price="₦2,000">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="appetizers">
+        <div class="image-wrap">
+          <span class="badge spicy">Spicy</span>
+          <img src="Buffalo Wings.jpg" alt="Buffalo Wings" />
+        </div>
+        <div class="item-details">
+          <h3>Buffalo Wings</h3>
+          <p>Hot and spicy chicken wings served with ranch dip.</p>
+          <span class="price">₦2,500</span>
+          <button class="btn btn-gold order-btn" data-name="Buffalo Wings" data-price="₦2,500">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="appetizers">
+        <div class="image-wrap">
+          <img src="Onion Rings.jpg" alt="Onion Rings" />
+        </div>
+        <div class="item-details">
+          <h3>Onion Rings</h3>
+          <p>Golden onion rings with crispy breadcrumb coating.</p>
+          <span class="price">₦1,800</span>
+          <button class="btn btn-gold order-btn" data-name="Onion Rings" data-price="₦1,800">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="appetizers">
+        <div class="image-wrap">
+          <img src="Nachos.jpg" alt="Nachos" />
+        </div>
+        <div class="item-details">
+          <h3>Nachos</h3>
+          <p>Tortilla chips topped with cheese, salsa and jalapeños.</p>
+          <span class="price">₦2,200</span>
+          <button class="btn btn-gold order-btn" data-name="Nachos" data-price="₦2,200">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="appetizers">
+        <div class="image-wrap">
+          <img src="Spring Rolls.jpg" alt="Spring Rolls" />
+        </div>
+        <div class="item-details">
+          <h3>Spring Rolls</h3>
+          <p>Veggie spring rolls with sweet chilli dip.</p>
+          <span class="price">₦1,600</span>
+          <button class="btn btn-gold order-btn" data-name="Spring Rolls" data-price="₦1,600">Order Now</button>
+        </div>
+      </article>
+
+      <article class="menu-card" data-category="pizzas" id="pizzas">
+        <div class="image-wrap">
+          <span class="badge">Chef Special</span>
+          <img src="Margherita Pizza.jpg" alt="Margherita Pizza" />
+        </div>
+        <div class="item-details">
+          <h3>Margherita Pizza</h3>
+          <p>Tomato, mozzarella and fresh basil on crispy pizza base.</p>
+          <span class="price">₦3,500</span>
+          <button class="btn btn-gold order-btn" data-name="Margherita Pizza" data-price="₦3,500">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="pizzas">
+        <div class="image-wrap">
+          <img src="Pepperoni Pizza.jpg" alt="Pepperoni Pizza" />
+        </div>
+        <div class="item-details">
+          <h3>Pepperoni Pizza</h3>
+          <p>Classic pepperoni, mozzarella and pizza sauce.</p>
+          <span class="price">₦4,000</span>
+          <button class="btn btn-gold order-btn" data-name="Pepperoni Pizza" data-price="₦4,000">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="pizzas">
+        <div class="image-wrap">
+          <span class="badge spicy">Spicy</span>
+          <img src="BBQ Chicken Pizza.jpg" alt="BBQ Chicken Pizza" />
+        </div>
+        <div class="item-details">
+          <h3>BBQ Chicken Pizza</h3>
+          <p>BBQ chicken, onions and smoky sauce.</p>
+          <span class="price">₦4,500</span>
+          <button class="btn btn-gold order-btn" data-name="BBQ Chicken Pizza" data-price="₦4,500">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="pizzas">
+        <div class="image-wrap">
+          <img src="Vegetarian Pizza.jpg" alt="Vegetarian Pizza" />
+        </div>
+        <div class="item-details">
+          <h3>Vegetarian Pizza</h3>
+          <p>Fresh veggies, cheese and tomato sauce.</p>
+          <span class="price">₦3,800</span>
+          <button class="btn btn-gold order-btn" data-name="Vegetarian Pizza" data-price="₦3,800">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="pizzas">
+        <div class="image-wrap">
+          <img src="Meat Lovers Pizza.jpg" alt="Meat Lovers Pizza" />
+        </div>
+        <div class="item-details">
+          <h3>Meat Lovers Pizza</h3>
+          <p>Sausage, bacon, pepperoni and extra cheese.</p>
+          <span class="price">₦5,000</span>
+          <button class="btn btn-gold order-btn" data-name="Meat Lovers Pizza" data-price="₦5,000">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="pizzas">
+        <div class="image-wrap">
+          <img src="Hawaiian Pizza.jpg" alt="Hawaiian Pizza" />
+        </div>
+        <div class="item-details">
+          <h3>Hawaiian Pizza</h3>
+          <p>Ham, pineapple and mozzarella cheese.</p>
+          <span class="price">₦4,200</span>
+          <button class="btn btn-gold order-btn" data-name="Hawaiian Pizza" data-price="₦4,200">Order Now</button>
+        </div>
+      </article>
+
+      <article class="menu-card" data-category="burgers" id="burgers">
+        <div class="image-wrap">
+          <img src="Classic Burger.jpg" alt="Classic Burger" />
+        </div>
+        <div class="item-details">
+          <h3>Classic Burger</h3>
+          <p>Beef patty with lettuce, tomato and cheese.</p>
+          <span class="price">₦2,500</span>
+          <button class="btn btn-gold order-btn" data-name="Classic Burger" data-price="₦2,500">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="burgers">
+        <div class="image-wrap">
+          <img src="Cheeseburger.jpg" alt="Cheeseburger" />
+        </div>
+        <div class="item-details">
+          <h3>Cheeseburger</h3>
+          <p>Juicy beef patty with melted cheddar.</p>
+          <span class="price">₦2,800</span>
+          <button class="btn btn-gold order-btn" data-name="Cheeseburger" data-price="₦2,800">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="burgers">
+        <div class="image-wrap">
+          <span class="badge">New</span>
+          <img src="Bacon Burger.jpg" alt="Bacon Burger" />
+        </div>
+        <div class="item-details">
+          <h3>Bacon Burger</h3>
+          <p>Crispy bacon, cheese and tangy sauce.</p>
+          <span class="price">₦3,200</span>
+          <button class="btn btn-gold order-btn" data-name="Bacon Burger" data-price="₦3,200">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="burgers">
+        <div class="image-wrap">
+          <img src="Veggie Burger.jpg" alt="Veggie Burger" />
+        </div>
+        <div class="item-details">
+          <h3>Veggie Burger</h3>
+          <p>Plant-based patty, greens and avocado.</p>
+          <span class="price">₦2,700</span>
+          <button class="btn btn-gold order-btn" data-name="Veggie Burger" data-price="₦2,700">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="burgers">
+        <div class="image-wrap">
+          <img src="Double Burger.jpg" alt="Double Burger" />
+        </div>
+        <div class="item-details">
+          <h3>Double Burger</h3>
+          <p>Two beef patties, double cheese and pickles.</p>
+          <span class="price">₦4,000</span>
+          <button class="btn btn-gold order-btn" data-name="Double Burger" data-price="₦4,000">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="burgers">
+        <div class="image-wrap">
+          <span class="badge spicy">Spicy</span>
+          <img src="Spicy Burger.jpg" alt="Spicy Burger" />
+        </div>
+        <div class="item-details">
+          <h3>Spicy Burger</h3>
+          <p>Jalapeños, hot sauce and crispy onion.</p>
+          <span class="price">₦3,000</span>
+          <button class="btn btn-gold order-btn" data-name="Spicy Burger" data-price="₦3,000">Order Now</button>
+        </div>
+      </article>
+
+      <article class="menu-card" data-category="pasta" id="pasta">
+        <div class="image-wrap">
+          <img src="Spaghetti Bolognese.jpg" alt="Spaghetti Bolognese" />
+        </div>
+        <div class="item-details">
+          <h3>Spaghetti Bolognese</h3>
+          <p>Spaghetti served with rich meat sauce.</p>
+          <span class="price">₦3,000</span>
+          <button class="btn btn-gold order-btn" data-name="Spaghetti Bolognese" data-price="₦3,000">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="pasta">
+        <div class="image-wrap">
+          <img src="Pesto Pasta.jpg" alt="Pesto Pasta" />
+        </div>
+        <div class="item-details">
+          <h3>Pesto Pasta</h3>
+          <p>Pasta tossed in fresh basil pesto.</p>
+          <span class="price">₦2,800</span>
+          <button class="btn btn-gold order-btn" data-name="Pesto Pasta" data-price="₦2,800">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="pasta">
+        <div class="image-wrap">
+          <img src="Carbonara.jpg" alt="Carbonara" />
+        </div>
+        <div class="item-details">
+          <h3>Carbonara</h3>
+          <p>Creamy pasta with bacon and parmesan.</p>
+          <span class="price">₦3,500</span>
+          <button class="btn btn-gold order-btn" data-name="Carbonara" data-price="₦3,500">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="pasta">
+        <div class="image-wrap">
+          <img src="Alfredo Pasta.jpg" alt="Alfredo Pasta" />
+        </div>
+        <div class="item-details">
+          <h3>Alfredo Pasta</h3>
+          <p>Fettuccine in creamy Alfredo sauce.</p>
+          <span class="price">₦3,200</span>
+          <button class="btn btn-gold order-btn" data-name="Alfredo Pasta" data-price="₦3,200">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="pasta">
+        <div class="image-wrap">
+          <img src="Penne Arrabbiata.jpg" alt="Penne Arrabbiata" />
+        </div>
+        <div class="item-details">
+          <h3>Penne Arrabbiata</h3>
+          <p>Spicy tomato penne with garlic and chili.</p>
+          <span class="price">₦2,900</span>
+          <button class="btn btn-gold order-btn" data-name="Penne Arrabbiata" data-price="₦2,900">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="pasta">
+        <div class="image-wrap">
+          <img src="Mac and Cheese.jpg" alt="Mac and Cheese" />
+        </div>
+        <div class="item-details">
+          <h3>Mac and Cheese</h3>
+          <p>Creamy macaroni with cheddar cheese.</p>
+          <span class="price">₦2,500</span>
+          <button class="btn btn-gold order-btn" data-name="Mac and Cheese" data-price="₦2,500">Order Now</button>
+        </div>
+      </article>
+
+      <article class="menu-card" data-category="chicken" id="chicken">
+        <div class="image-wrap">
+          <span class="badge">Popular</span>
+          <img src="Fried Chicken.jpg" alt="Fried Chicken" />
+        </div>
+        <div class="item-details">
+          <h3>Fried Chicken</h3>
+          <p>Crispy fried chicken served hot.</p>
+          <span class="price">₦3,000</span>
+          <button class="btn btn-gold order-btn" data-name="Fried Chicken" data-price="₦3,000">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="chicken">
+        <div class="image-wrap">
+          <img src="Grilled Chicken.jpg" alt="Grilled Chicken" />
+        </div>
+        <div class="item-details">
+          <h3>Grilled Chicken</h3>
+          <p>Herb-marinated grilled chicken breast.</p>
+          <span class="price">₦3,200</span>
+          <button class="btn btn-gold order-btn" data-name="Grilled Chicken" data-price="₦3,200">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="chicken">
+        <div class="image-wrap">
+          <img src="Chicken Nuggets.jpg" alt="Chicken Nuggets" />
+        </div>
+        <div class="item-details">
+          <h3>Chicken Nuggets</h3>
+          <p>Crispy breaded chicken pieces.</p>
+          <span class="price">₦2,000</span>
+          <button class="btn btn-gold order-btn" data-name="Chicken Nuggets" data-price="₦2,000">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="chicken">
+        <div class="image-wrap">
+          <img src="Chicken Shawarma.jpg" alt="Chicken Shawarma" />
+        </div>
+        <div class="item-details">
+          <h3>Chicken Shawarma</h3>
+          <p>Spiced chicken wrap with garlic sauce.</p>
+          <span class="price">₦2,800</span>
+          <button class="btn btn-gold order-btn" data-name="Chicken Shawarma" data-price="₦2,800">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="chicken">
+        <div class="image-wrap">
+          <img src="Chicken Curry.jpg" alt="Chicken Curry" />
+        </div>
+        <div class="item-details">
+          <h3>Chicken Curry</h3>
+          <p>Rich curry with tender chicken pieces.</p>
+          <span class="price">₦3,500</span>
+          <button class="btn btn-gold order-btn" data-name="Chicken Curry" data-price="₦3,500">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="chicken">
+        <div class="image-wrap">
+          <img src="Chicken Stir Fry.jpg" alt="Chicken Stir Fry" />
+        </div>
+        <div class="item-details">
+          <h3>Chicken Stir Fry</h3>
+          <p>Chicken, peppers and vegetables in sauce.</p>
+          <span class="price">₦3,000</span>
+          <button class="btn btn-gold order-btn" data-name="Chicken Stir Fry" data-price="₦3,000">Order Now</button>
+        </div>
+      </article>
+
+      <article class="menu-card" data-category="sides" id="sides">
+        <div class="image-wrap">
+          <img src="French Fries.jpg" alt="French Fries" />
+        </div>
+        <div class="item-details">
+          <h3>French Fries</h3>
+          <p>Classic crispy fries with seasoning.</p>
+          <span class="price">₦1,000</span>
+          <button class="btn btn-gold order-btn" data-name="French Fries" data-price="₦1,000">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="sides">
+        <div class="image-wrap">
+          <img src="Coleslaw.jpg" alt="Coleslaw" />
+        </div>
+        <div class="item-details">
+          <h3>Coleslaw</h3>
+          <p>Creamy cabbage salad with carrots.</p>
+          <span class="price">₦800</span>
+          <button class="btn btn-gold order-btn" data-name="Coleslaw" data-price="₦800">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="sides">
+        <div class="image-wrap">
+          <img src="Mashed Potatoes.jpg" alt="Mashed Potatoes" />
+        </div>
+        <div class="item-details">
+          <h3>Mashed Potatoes</h3>
+          <p>Soft mashed potatoes with butter.</p>
+          <span class="price">₦1,200</span>
+          <button class="btn btn-gold order-btn" data-name="Mashed Potatoes" data-price="₦1,200">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="sides">
+        <div class="image-wrap">
+          <img src="Steamed Rice.jpg" alt="Steamed Rice" />
+        </div>
+        <div class="item-details">
+          <h3>Steamed Rice</h3>
+          <p>Fluffy steamed rice to pair with mains.</p>
+          <span class="price">₦900</span>
+          <button class="btn btn-gold order-btn" data-name="Steamed Rice" data-price="₦900">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="sides">
+        <div class="image-wrap">
+          <img src="Garlic Bread.jpg" alt="Garlic Bread" />
+        </div>
+        <div class="item-details">
+          <h3>Garlic Bread</h3>
+          <p>Toasted garlic bread with herbs.</p>
+          <span class="price">₦1,500</span>
+          <button class="btn btn-gold order-btn" data-name="Garlic Bread" data-price="₦1,500">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="sides">
+        <div class="image-wrap">
+          <img src="Onion Ring.jpg" alt="Onion Rings" />
+        </div>
+        <div class="item-details">
+          <h3>Onion Rings</h3>
+          <p>Crispy onion rings with tartar sauce.</p>
+          <span class="price">₦1,800</span>
+          <button class="btn btn-gold order-btn" data-name="Onion Rings" data-price="₦1,800">Order Now</button>
+        </div>
+      </article>
+
+      <article class="menu-card" data-category="desserts" id="desserts">
+        <div class="image-wrap">
+          <img src="Cakes.jpg" alt="Chocolate cake" />
+        </div>
+        <div class="item-details">
+          <h3>Chocolate Cake</h3>
+          <p>Rich and moist chocolate cake slice.</p>
+          <span class="price">₦2,500</span>
+          <button class="btn btn-gold order-btn" data-name="Chocolate Cake" data-price="₦2,500">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="desserts">
+        <div class="image-wrap">
+          <img src="Ice Cream.jpg" alt="Ice Cream" />
+        </div>
+        <div class="item-details">
+          <h3>Ice Cream</h3>
+          <p>Vanilla ice cream scoop with chocolate sauce.</p>
+          <span class="price">₦1,000</span>
+          <button class="btn btn-gold order-btn" data-name="Ice Cream" data-price="₦1,000">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="desserts">
+        <div class="image-wrap">
+          <img src="Cheesecake.jpg" alt="Cheesecake" />
+        </div>
+        <div class="item-details">
+          <h3>Cheesecake</h3>
+          <p>Creamy cheesecake with berry compote.</p>
+          <span class="price">₦2,800</span>
+          <button class="btn btn-gold order-btn" data-name="Cheesecake" data-price="₦2,800">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="desserts">
+        <div class="image-wrap">
+          <img src="Brownies.jpg" alt="Brownies" />
+        </div>
+        <div class="item-details">
+          <h3>Brownies</h3>
+          <p>Fudgy chocolate brownies with nuts.</p>
+          <span class="price">₦1,500</span>
+          <button class="btn btn-gold order-btn" data-name="Brownies" data-price="₦1,500">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="desserts">
+        <div class="image-wrap">
+          <img src="Fruit Salad.jpg" alt="Fruit Salad" />
+        </div>
+        <div class="item-details">
+          <h3>Fruit Salad</h3>
+          <p>Fresh seasonal fruit mix with honey.</p>
+          <span class="price">₦1,200</span>
+          <button class="btn btn-gold order-btn" data-name="Fruit Salad" data-price="₦1,200">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="desserts">
+        <div class="image-wrap">
+          <img src="Chocolate Pudding.jpg" alt="Chocolate Pudding" />
+        </div>
+        <div class="item-details">
+          <h3>Chocolate Pudding</h3>
+          <p>Silky chocolate pudding topped with cream.</p>
+          <span class="price">₦1,800</span>
+          <button class="btn btn-gold order-btn" data-name="Chocolate Pudding" data-price="₦1,800">Order Now</button>
+        </div>
+      </article>
+
+      <article class="menu-card" data-category="drinks" id="drinks">
+        <div class="image-wrap">
+          <img src="Coca Cola.jpg" alt="Coca Cola" />
+        </div>
+        <div class="item-details">
+          <h3>Coca Cola</h3>
+          <p>Classic chilled cola drink.</p>
+          <span class="price">₦500</span>
+          <button class="btn btn-gold order-btn" data-name="Coca Cola" data-price="₦500">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="drinks">
+        <div class="image-wrap">
+          <img src="Orange Juice.jpg" alt="Orange Juice" />
+        </div>
+        <div class="item-details">
+          <h3>Orange Juice</h3>
+          <p>Freshly squeezed orange juice.</p>
+          <span class="price">₦800</span>
+          <button class="btn btn-gold order-btn" data-name="Orange Juice" data-price="₦800">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="drinks">
+        <div class="image-wrap">
+          <img src="Iced Tea.jpg" alt="Iced Tea" />
+        </div>
+        <div class="item-details">
+          <h3>Iced Tea</h3>
+          <p>Chilled iced tea with lemon and mint.</p>
+          <span class="price">₦600</span>
+          <button class="btn btn-gold order-btn" data-name="Iced Tea" data-price="₦600">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="drinks">
+        <div class="image-wrap">
+          <img src="Milkshake.jpg" alt="Milkshake" />
+        </div>
+        <div class="item-details">
+          <h3>Milkshake</h3>
+          <p>Chocolate milkshake topped with cream.</p>
+          <span class="price">₦1,200</span>
+          <button class="btn btn-gold order-btn" data-name="Milkshake" data-price="₦1,200">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="drinks">
+        <div class="image-wrap">
+          <img src="Coffee.jpg" alt="Coffee" />
+        </div>
+        <div class="item-details">
+          <h3>Coffee</h3>
+          <p>Hot brewed coffee with aromatic beans.</p>
+          <span class="price">₦700</span>
+          <button class="btn btn-gold order-btn" data-name="Coffee" data-price="₦700">Order Now</button>
+        </div>
+      </article>
+      <article class="menu-card" data-category="drinks">
+        <div class="image-wrap">
+          <img src="Smoothie.jpg" alt="Smoothie" />
+        </div>
+        <div class="item-details">
+          <h3>Smoothie</h3>
+          <p>Berry smoothie with fresh fruits.</p>
+          <span class="price">₦1,000</span>
+          <button class="btn btn-gold order-btn" data-name="Smoothie" data-price="₦1,000">Order Now</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="orderModalLabel">Place Your Order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Item:</strong> <span id="order-name">Quickbite special</span></p>
+          <p><strong>Price:</strong> <span id="order-price">₦0</span></p>
+          <div class="mb-3">
+            <label for="order-quantity" class="form-label">Quantity</label>
+            <input type="number" id="order-quantity" class="form-control" min="1" value="1">
+          </div>
+          <div class="mb-3">
+            <label for="order-note" class="form-label">Special note</label>
+            <textarea id="order-note" class="form-control" rows="2" placeholder="Add instructions or delivery notes"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <a id="order-action" href="https://wa.me/2349116354643" target="_blank" class="btn btn-danger">Order on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">QUICKBITE</div>
+      <p class="footer-copy">&copy; 2026 <strong>QUICKBITE</strong>. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script src="main.js"></script>
+<script>
+  const searchInput = document.getElementById('menu-search');
+  const tabs = document.querySelectorAll('.menu-tab');
+  const cards = document.querySelectorAll('.menu-card');
+  const clearButton = document.getElementById('search-clear');
+
+
+  function filterMenu(category = 'all', query = '') {
+    const normalizedQuery = query.trim().toLowerCase();
+    cards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      const description = card.querySelector('p').textContent.toLowerCase();
+      const matchesCategory = category === 'all' || card.dataset.category === category;
+      const matchesSearch = normalizedQuery === '' || title.includes(normalizedQuery) || description.includes(normalizedQuery);
+      card.style.display = matchesCategory && matchesSearch ? 'grid' : 'none';
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(item => item.classList.remove('active'));
+      tab.classList.add('active');
+      filterMenu(tab.dataset.category, searchInput.value);
+      if (tab.dataset.category !== 'all') {
+        const section = document.getElementById(tab.dataset.category);
+        if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  searchInput.addEventListener('input', () => {
+    const activeTab = document.querySelector('.menu-tab.active').dataset.category;
+    filterMenu(activeTab, searchInput.value);
+  });
+
+  clearButton.addEventListener('click', () => {
+    searchInput.value = '';
+    filterMenu(document.querySelector('.menu-tab.active').dataset.category, '');
+  });
+
+  document.querySelectorAll('.order-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const itemName = button.dataset.name;
+      const itemPrice = button.dataset.price;
+      const quantityInput = document.getElementById('order-quantity');
+      const noteField = document.getElementById('order-note');
+      const actionLink = document.getElementById('order-action');
+
+      quantityInput.value = 1;
+      noteField.value = '';
+      document.getElementById('order-name').textContent = itemName;
+      document.getElementById('order-price').textContent = itemPrice;
+
+      function updateOrderLink() {
+        const qty = Math.max(1, Number(quantityInput.value) || 1);
+        quantityInput.value = qty;
+        const note = noteField.value.trim();
+        const message = `Hello Quickbite, I would like to order ${itemName} (${itemPrice}) x ${qty}.${note ? ` Note: ${note}` : ''}`;
+        actionLink.href = `https://wa.me/2349116354643?text=${encodeURIComponent(message)}`;
+      }
+
+      quantityInput.oninput = updateOrderLink;
+      noteField.oninput = updateOrderLink;
+      updateOrderLink();
+
+      const orderModal = new bootstrap.Modal(document.getElementById('orderModal'));
+      orderModal.show();
+    });
+  });
+</script>
+
+</body>
+</html>
